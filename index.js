@@ -6,7 +6,7 @@ let buttonID;
 
 // listen to keydown only if the game haven't started.
 
-$(document).on("keydown", function () {
+$(document).on("keydown tap", function () {
     if ($("h1").text() === "Press anykey to start!") {
         buttonID = genNextButtonID();
         systemButtonAnimate(buttonID);
@@ -19,7 +19,7 @@ $(document).on("keydown", function () {
     }
 });
 
-$(".btn").on("click", function (e) {
+$(".btn").on("click tap", function (e) {
     clickCount++;
     userPattern.push(e.target.id);
     userClickAnimate(e);
